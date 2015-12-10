@@ -1,0 +1,288 @@
+*
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #234;
+  color: #f3f3f3;
+  font-family: Voltaire, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: .5px;
+}
+
+
+#andromeda {
+  background-image: url("andromeda.jpg");
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.hazey {
+  z-index: 0;
+  opacity: .77;
+  background-color: #111;
+}
+
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.inner-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+
+@media (max-width: 1200px) {
+  .flexrow {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 560px) {
+  .flexrow {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+.container {
+  max-width: 900px;
+  min-height: 1rem;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+}
+
+.footer {
+}
+
+.main {
+}
+
+.Playlist {
+  text-align: center;
+  //text-shadow: 0px 0px 6px #222;
+}
+
+.Playlist:hover .Playlist__follow {
+  opacity: 1;
+}
+
+.Playlist__title {
+  font-size: 1.8rem;
+  line-height: 1rem;
+  color: #69face;
+}
+
+.Playlist__iframe {
+  margin-bottom: 1.5rem;
+  opacity: .69;
+  transition: opacity .5s ease-in-out;
+}
+
+.Playlist__notes {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Playlist__notes > li {
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+
+.Playlist__notes > li::before {
+  font-family: 'FontAwesome';
+  vertical-align: middle;
+  font-size: .4rem;
+  padding-right: .4rem;
+  content: '\f1db';
+}
+
+.Playlist__follow {
+  display: block;
+  margin: 0.6rem;
+  opacity: 0;
+  font-size: .75rem;
+  transition: opacity .5s ease-in-out;
+}
+
+.Playlist__follow--type.type--open::before {
+  display: inline;
+  content: 'open in Spotify';
+  color: #aaa;
+  //text-align: left;
+}
+
+.Playlist__follow--type.type--player::before,
+.Playlist__follow--type.type--player::after {
+  display: inline;
+  opacity: 0;
+  //text-align: left;
+}
+
+.Playlist__follow--type.type--player:hover::before,
+.Playlist__follow--type.type--player:hover::after {
+  color: #69face;
+  opacity: 1;
+}
+
+.Playlist__follow--type.type--player::before {
+  content: '[';
+}
+.Playlist__follow--type.type--player::after {
+  content: ']';
+}
+
+.Playlist__follow--type {
+  display: inline;
+  padding: 0 0.6rem;
+  //text-align: right;
+  //color: #aaa;
+}
+
+.Playlist__follow--type a {
+  color: #aaa;
+  text-decoration: none;
+  //padding: 0 1.9rem;
+  transition: all .2s ease-in;
+}
+
+.Playlist__follow--type a:hover {
+  //padding: 0 .3rem;
+}
+
+.Snip .primary {
+  display: inline;
+  font-size: 2.4rem;
+}
+
+.Snip .secondary {
+  color: #aaa;
+  font-size: 1.2rem;
+}
+
+.Snip :last-child {
+  padding-left: .5rem;
+}
+
+
+
+/* Utilities */
+
+.grow {
+  width: 100%;
+  min-width: 100%;
+}
+
+.snug {
+  width: 1.23%;
+  white-space: nowrap;
+}
+
+.t-grid {
+  display: table;
+}
+
+.t-grid > [class^="cell"] {
+  display: table-cell;
+}
+
+.t-grid > .cell-right {
+  text-align: right;
+}
+
+.cell-1-2 {
+  width: 50%;
+}
+
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.abs-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.abs-top    { position: absolute; top: 0; }
+.abs-middle { position: absolute; top: 50%; transform: translateY(-50%); }
+.abs-bottom { position: absolute; bottom: 0; }
+.abs-left   { position: absolute; left: 0; }
+.abs-center { position: absolute; left: 50%; transform: translateX(-50%); }
+.abs-right  { position: absolute; right: 0; }
+.abs-middle.abs-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) !important; }
+
+.gap-around-sm {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.gap-between-sm + .gap-between-sm {
+  margin-top: 2rem;
+}
+
+.gap-trailing-sm {
+  margin-bottom: 2rem;
+}
+
+.gap-leading-sm {
+  margin-top: 2rem;
+}
+
+.gap-around {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.gap-between + .gap-between {
+  margin-top: 4rem;
+}
+
+.gap-trailing {
+  margin-bottom: 4rem;
+}
+
+.gap-leading {
+  margin-top: 4rem;
+}
+
+.gap-around-lg {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.gap-between-lg + .gap-between-lg {
+  margin-top: 6rem;
+}
+
+.gap-trailing-lg {
+  margin-bottom: 6rem;
+}
+
+.gap-leading-lg {
+  margin-top: 6rem;
+}
+
