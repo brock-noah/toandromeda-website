@@ -7,13 +7,59 @@
 }
 
 body {
-  background-color: #234;
+  background-color: #2d2d2d;
   color: #f3f3f3;
   font-family: Voltaire, Helvetica, sans-serif;
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: .5px;
 }
 
+header {
+  margin-bottom: 1.5rem;
+}
+
+footer {
+  margin-top: 1.5rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.7rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #69face;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 2px solid currentColor;
+}
 
 #andromeda {
   background-image: url("andromeda.jpg");
@@ -46,42 +92,8 @@ body {
   min-height: 100vh;
 }
 
-@media (max-width: 1200px) {
-  .flexrow {
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 560px) {
-  .flexrow {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-
-.container {
-  max-width: 900px;
-  min-height: 1rem;
-}
-
-.centered {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.header {
-}
-
-.footer {
-}
-
-.main {
-}
-
 .Playlist {
   text-align: center;
-  //text-shadow: 0px 0px 6px #222;
 }
 
 .Playlist:hover .Playlist__follow {
@@ -91,7 +103,7 @@ body {
 .Playlist__title {
   font-size: 1.8rem;
   line-height: 1rem;
-  color: #69face;
+  color: #cefa69;
 }
 
 .Playlist__iframe {
@@ -171,23 +183,18 @@ body {
   //padding: 0 .3rem;
 }
 
-.Snip .primary {
-  display: inline;
-  font-size: 2.4rem;
+
+/* Utilities / Generics */
+
+.container {
+  max-width: 900px;
+  min-height: 1rem;
 }
 
-.Snip .secondary {
-  color: #aaa;
-  font-size: 1.2rem;
+.centered {
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.Snip :last-child {
-  padding-left: .5rem;
-}
-
-
-
-/* Utilities */
 
 .grow {
   width: 100%;
@@ -207,12 +214,20 @@ body {
   display: table-cell;
 }
 
-.t-grid > .cell-right {
+.cell-1-2 {
+  width: 50%;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
   text-align: right;
 }
 
-.cell-1-2 {
-  width: 50%;
+.text-center {
+  text-align: center;
 }
 
 .wrap {
@@ -257,6 +272,11 @@ body {
   margin-bottom: 4rem;
 }
 
+.gap-x-around-sm {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 .gap-between + .gap-between {
   margin-top: 4rem;
 }
@@ -286,3 +306,20 @@ body {
   margin-top: 6rem;
 }
 
+
+@media (max-width: 1200px) {
+  .flexrow {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 560px) {
+  .flexrow {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .Playlist .Playlist__follow {
+    opacity: 1;
+  }
+}
