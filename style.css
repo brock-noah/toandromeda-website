@@ -7,7 +7,6 @@
 }
 
 body {
-  background-color: #2d2d2d;
   color: #f3f3f3;
   font-family: Voltaire, Helvetica, sans-serif;
   font-size: 16px;
@@ -135,26 +134,23 @@ a:hover {
   margin: 0.6rem;
   opacity: 0;
   font-size: .75rem;
+  color: #ce69fa;
   transition: opacity .5s ease-in-out;
 }
 
 .Playlist__follow--type.type--open::before {
   display: inline;
-  content: 'open in Spotify';
-  color: #aaa;
-  //text-align: left;
+  content: 'open in Spotify:';
 }
 
 .Playlist__follow--type.type--player::before,
 .Playlist__follow--type.type--player::after {
   display: inline;
   opacity: 0;
-  //text-align: left;
 }
 
 .Playlist__follow--type.type--player:hover::before,
 .Playlist__follow--type.type--player:hover::after {
-  color: #69face;
   opacity: 1;
 }
 
@@ -168,19 +164,15 @@ a:hover {
 .Playlist__follow--type {
   display: inline;
   padding: 0 0.6rem;
-  //text-align: right;
-  //color: #aaa;
 }
 
 .Playlist__follow--type a {
   color: #aaa;
   text-decoration: none;
-  //padding: 0 1.9rem;
   transition: all .2s ease-in;
 }
 
 .Playlist__follow--type a:hover {
-  //padding: 0 .3rem;
 }
 
 
@@ -248,7 +240,7 @@ a:hover {
 .abs-left   { position: absolute; left: 0; }
 .abs-center { position: absolute; left: 50%; transform: translateX(-50%); }
 .abs-right  { position: absolute; right: 0; }
-.abs-middle.abs-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) !important; }
+.abs-middle.abs-center { position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); }
 
 .gap-around-sm {
   margin-top: 2rem;
