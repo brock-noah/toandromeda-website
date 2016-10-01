@@ -18,7 +18,8 @@ header {
 }
 
 footer {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 h1 {
@@ -45,10 +46,15 @@ h6 {
   font-size: 1.1rem;
 }
 
+h1, h2, h3, h4, h5, h6,
+.text-green {
+  color: #cefa69;
+}
+
 p {
   font-size: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: .2rem;
+  margin-bottom: .8rem;
 }
 
 a {
@@ -74,7 +80,6 @@ a:hover {
   opacity: .77;
   background-color: #111;
 }
-
 
 .flexrow {
   display: flex;
@@ -208,6 +213,10 @@ a:hover {
 
 .cell-1-2 {
   width: 50%;
+}
+
+.ib {
+  display: inline-block;
 }
 
 .text-left {
