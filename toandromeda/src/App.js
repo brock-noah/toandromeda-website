@@ -1,19 +1,59 @@
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Follow from './components/Follow';
+import Playlist from './components/Playlist';
+import Header from './components/Header';
+import Stars from './components/Stars';
 
-class App extends Component {
+const lists = [{
+  name: 'noise rock vomit',
+  id: '0tF9WHvWir9ukih9D6FMSc'
+},{
+  name: 'clear rays',
+  id: '22LtQBaRJHUee5AymjjspY'
+},{
+  name: 'mellow haze',
+  id: '4xI8fnw5sJJVIKrkcXlqC0'
+},{
+  name: 'shadow electronic',
+  id: '7uRsdAnovHesAk5iv66jhc',
+}];
+
+class App extends React.Component {
+
+  static propTypes = {
+    playlists: PropTypes.array,
+    user: PropTypes.string
+  };
+
+  static defaultProps = {
+    playlists: lists,
+    user: '1225146958'
+  };
+
   render() {
+    const {
+      playlists,
+      user
+    } = this.props;
+
     return (
       <div className="App">
-        <h1>Hello World!</h1>
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+        <Stars />
+        <Header />
+        <div className="playlist-flex">
+          {playlists.map(list =>
+            <Playlist {...{
+              key: list.id,
+              user,
+              ...list
+            }} />
+          )}
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <footer>
+          <Follow />
+        </footer>
       </div>
     );
   }

@@ -1,0 +1,7 @@
+.Follow {
+}
+
+.Follow > a > i {
+  display: block;
+  padding: 10px;
+}
