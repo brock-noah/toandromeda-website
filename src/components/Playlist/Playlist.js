@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import OpenWith from './OpenWith';
 import './Playlist.css';
 
 Playlist.propTypes = {
@@ -23,11 +24,8 @@ function Playlist({
   return (
     <article className="Playlist">
       <h3 className="Playlist_name">{name}</h3>
-      <iframe src={iframe} width="300" height="380" frameborder="0" allowTransparency="true"></iframe>
-      <div>
-        Open with:
-        <a href={follow.desktop}>desktop app</a> <a href={follow.web}>web player</a>
-      </div>
+      <iframe src={iframe} width="300" height="380" frameBorder="0" allowTransparency="true"></iframe>
+      <OpenWith {...follow} />
     </article>
   );
 }

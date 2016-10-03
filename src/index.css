@@ -55,13 +55,3 @@ a {
 a:hover {
   border-bottom: 2px solid currentColor;
 }
-
-.container {
-  max-width: 900px;
-  min-height: 1rem;
-}
-
-.centered {
-  margin-left: auto;
-  margin-right: auto;
-}
