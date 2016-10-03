@@ -1,17 +1,7 @@
 .App {
 }
 
-.container {
-  max-width: 900px;
-  min-height: 1rem;
-}
-
-.centered {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.playlist-flex {
+.App_playlists {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -19,19 +9,19 @@
 }
 
 @media (max-width: 1280px) {
-  .playlist-flex {
+  .App_playlists {
     flex-wrap: wrap;
   }
 }
 
 @media (max-width: 560px) {
-  .playlist-flex {
+  .App_playlists {
     flex-direction: column;
     text-align: center;
   }
 }
 
-footer {
+.App_footer {
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;

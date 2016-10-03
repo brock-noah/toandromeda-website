@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Follow from './components/Follow';
 import Playlist from './components/Playlist';
@@ -42,7 +41,7 @@ class App extends React.Component {
       <div className="App">
         <Stars />
         <Header />
-        <div className="playlist-flex">
+        <div className="App_playlists">
           {playlists.map(list =>
             <Playlist {...{
               key: list.id,
@@ -51,7 +50,7 @@ class App extends React.Component {
             }} />
           )}
         </div>
-        <footer>
+        <footer className="App_footer">
           <Follow />
         </footer>
       </div>
