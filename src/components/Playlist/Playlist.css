@@ -1,0 +1,20 @@
+.Playlist {
+}
+
+.Playlist_name {
+  text-transform: capitalize;
+}
+
+.Openwith {
+  text-align: center;
+  font-size: .9rem;
+}
+
+.Openwith > * {
+  margin: 5px;
+}
+
+.Openwith > i {
+  font-size: .5rem;
+  vertical-align: middle;
+}

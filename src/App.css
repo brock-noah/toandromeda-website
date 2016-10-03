@@ -1,0 +1,29 @@
+.App {
+}
+
+.App_playlists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+@media (max-width: 1280px) {
+  .App_playlists {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 560px) {
+  .App_playlists {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.App_footer {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
