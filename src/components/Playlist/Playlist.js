@@ -24,7 +24,7 @@ function Playlist({
   return (
     <article className="Playlist">
       <h3 className="Playlist_name">{name}</h3>
-      <iframe src={iframe} width="300" height="380" frameBorder="0" allowTransparency="true"></iframe>
+      <iframe className="Playlist_iframe" src={iframe} frameBorder="0" allowTransparency="true"></iframe>
       <OpenWith {...follow} />
     </article>
   );

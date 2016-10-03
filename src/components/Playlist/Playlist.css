@@ -1,8 +1,19 @@
 .Playlist {
+  margin: 1rem;
 }
 
 .Playlist_name {
   text-transform: capitalize;
+}
+
+.Playlist_iframe {
+  width: 300px;
+}
+
+@media (min-width: 560px) {
+  .Playlist_iframe {
+    height: 380px;
+  }
 }
 
 .Openwith {
@@ -17,4 +28,10 @@
 .Openwith > i {
   font-size: .5rem;
   vertical-align: middle;
+}
+
+@media (max-width: 560px) {
+  .Openwith {
+    display: none;
+  }
 }
