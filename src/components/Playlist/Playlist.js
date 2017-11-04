@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'react-proptypes';
 import OpenWith from './OpenWith';
 import './Playlist.css';
 

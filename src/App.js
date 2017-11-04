@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'react-proptypes';
 import './App.css';
 import Follow from './components/Follow';
 import Playlist from './components/Playlist';
