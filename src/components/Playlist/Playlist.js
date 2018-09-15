@@ -4,27 +4,32 @@ import OpenWith from './OpenWith';
 import './Playlist.css';
 
 Playlist.propTypes = {
-  name: PropTypes.string,
-  id: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  uri: PropTypes.string,
   user: PropTypes.string
 };
 
 function Playlist({
-  id,
-  name,
+  v,
+  uri,
+  title,
+  description,
   user,
 }) {
   const iframe = 
-    'https://embed.spotify.com/?uri=spotify%3Auser%3A'+ user +'%3Aplaylist%3A'+ id;
+    'https://embed.spotify.com/?uri=spotify%3Auser%3A'+ user +'%3Aplaylist%3A'+ uri;
 
   const follow = {
-    desktop: 'spotify:user:'+ user +':playlist:'+ id,
-    web: 'https://open.spotify.com/user/'+ user +'/playlist/'+ id
+    desktop: 'spotify:user:'+ user +':playlist:'+ uri,
+    web: 'https://open.spotify.com/user/'+ user +'/playlist/'+ uri
   };
 
   return (
     <article className="Playlist">
-      <h3 className="Playlist_name">{name}</h3>
+      <h6 className="Playlist_name">{v}</h6>
+      <h3 className="Playlist_name">{title}</h3>
+      <p>{description}</p>
       <iframe className="Playlist_iframe" src={iframe} frameBorder="0" allowTransparency="true"></iframe>
       <OpenWith {...follow} />
     </article>

@@ -1,3 +1,16 @@
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+select {
+  /*border: ;*/
+}
+
 .App {
 }
 
@@ -29,4 +42,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.List_list {
+}
+
+.List_item {
+  list-style-type: none;
+  padding: 8px 16px;
+  display: flex;
+}
+
+.ListItem_title {
+  padding-right: 8px;
+  min-width: 24px;
+  display: inline-block;
+}
+
+.ListItem_link {
 }
