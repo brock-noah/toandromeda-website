@@ -2,6 +2,12 @@
   margin: 1rem;
 }
 
+.Playlist_version {
+  color: var(--text-white);
+  margin-top: 14px;
+  margin-right: 14px;
+}
+
 .Playlist_name {
   text-transform: capitalize;
 }

@@ -11,7 +11,13 @@ select {
   /*border: ;*/
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
 .App {
+  margin-top: 3rem;
 }
 
 .App_playlists {
@@ -38,26 +44,63 @@ select {
 }
 
 .App_footer {
-  margin-top: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  text-align: center;
 }
 
 .List_list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1080px;
+  max-height: 100vh;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.List_list:hover .List_item {
+  color: var(--text-gray);
+  opacity: 0.7;
+  /*transition: opacity linear 0.1s;*/
+}
+
+.List_li {
+  list-style-type: none;
+  width: 33%;
 }
 
 .List_item {
-  list-style-type: none;
-  padding: 8px 16px;
   display: flex;
+  height: 100%;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.List_list .List_item:hover {
+  background-color: rgba(10,10,10,0.5);
+  color: var(--text-white);
+  opacity: 1;
+  /*background-image: linear-gradient(transparent, #444); */
+}
+
+/*.List_item:hover .List_item {
+  color: white;
+}
+*/
+.ListItem_version {
+  min-width: 36px;
+  text-align: right;
+  padding-right: 8px;
 }
 
 .ListItem_title {
   padding-right: 8px;
-  min-width: 24px;
-  display: inline-block;
 }
 
 .ListItem_link {
+}
+
+.ListItem_description {
+  font-size: .8rem;
+  /*color: #999;*/
 }

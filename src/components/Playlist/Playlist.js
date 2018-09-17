@@ -26,12 +26,18 @@ function Playlist({
   };
 
   return (
-    <article className="Playlist">
-      <h6 className="Playlist_name">{v}</h6>
-      <h3 className="Playlist_name">{title}</h3>
-      <p>{description}</p>
-      <iframe className="Playlist_iframe" src={iframe} frameBorder="0" allowTransparency="true"></iframe>
-      <OpenWith {...follow} />
+    <article className="Playlist flex-row">
+      <section className='flex-row'>
+        <h6 className="Playlist_version">{v}</h6>
+        <div>
+          <h3 className="Playlist_name">{title}</h3>
+          <p>{description}</p>
+        </div>
+      </section>
+      <div style={{marginLeft: '32px'}}>
+        <iframe className="Playlist_iframe" src={'localhost:9000'} frameBorder="0" allowTransparency="true"></iframe>
+        <OpenWith {...follow} />
+      </div>
     </article>
   );
 }
