@@ -48,19 +48,18 @@ class App extends React.Component {
           <Header />
 
           <div className="App_playlists" style={{margin: '0 auto'}}>
-              <ol className="List_list">
+            <ol className="List_grid List_list">
               {playlists.map(list =>
-                <li key={list.v} className="List_li">
-                  <Link  to={`/${list.v}`} className="opacic List_item">
-                    <span className="ListItem_version">{list.v}</span>
-                    <div>
-                      <div className="ListItem_title text-smooth-green">{list.title}</div>
-                      <div className="ListItem_description">{list.description}</div>
-                    </div>
+                <li key={list.v} className="List_li List_item List_grid-item">
+                  <Link  to={`/${list.v}`} className="opacic List_link">
+                    <div className="ListItem_version">{list.v}</div>
+                    <div className="ListItem_title text-smooth-green">{list.title}</div>
+                    <div className="ListItem_description">{list.description}</div>
                   </Link>
-                  <Route key={list.v} path={`/${list.v}`} component={props =>
+                  <Route key={list.v} path={`/${list.v}`} render={rr =>
                     <Playlist {...{
                       key: list.v,
+                      active: rr.match.isExact,
                       user,
                       ...list
                     }} />
@@ -68,7 +67,7 @@ class App extends React.Component {
                   />
                 </li>
               )}
-              </ol>
+            </ol>
 
           </div>
           <footer className="App_footer">

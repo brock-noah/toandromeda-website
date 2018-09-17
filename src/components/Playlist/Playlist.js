@@ -12,6 +12,7 @@ Playlist.propTypes = {
 
 function Playlist({
   v,
+  active,
   uri,
   title,
   description,
@@ -25,19 +26,17 @@ function Playlist({
     web: 'https://open.spotify.com/user/'+ user +'/playlist/'+ uri
   };
 
+  const className = ['Playlist', active && 'List_item--active'].filter(Boolean).join(' ')
+
   return (
-    <article className="Playlist flex-row">
-      <section className='flex-row'>
-        <h6 className="Playlist_version">{v}</h6>
-        <div>
-          <h3 className="Playlist_name">{title}</h3>
-          <p>{description}</p>
-        </div>
+    <article className={className}>
+      <section style={{display: 'none'}}>
+        <h4 className="Playlist_version">{v}</h4>
+        <h3 className="Playlist_name">{title}</h3>
+        <p>{description}</p>
       </section>
-      <div style={{marginLeft: '32px'}}>
-        <iframe className="Playlist_iframe" src={'localhost:9000'} frameBorder="0" allowTransparency="true"></iframe>
-        <OpenWith {...follow} />
-      </div>
+      <OpenWith {...follow} />
+      <iframe className="Playlist_iframe" src={iframe} frameBorder="0" allowTransparency="true"></iframe>
     </article>
   );
 }

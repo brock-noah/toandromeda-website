@@ -7,7 +7,12 @@ function Header(props) {
     <header className="Header">
       <Link to='/'><h1>To Andromeda and Back</h1></Link>
       <p>
-        Playlists of mellow haze and obfuscated ray for intergalactic cruise control.
+        Playlists of mellow haze and obfuscated rays for intergalactic cruise control.
+      </p>
+      <p>
+        <small style={{ color: 'var(--text-gray)'}}>
+          No shuffle, play from top to bottom.
+        </small>
       </p>
     </header>
   );

@@ -5,10 +5,10 @@
   // },
 
 export const playlists = {
-  '12.5': {
-    v: '12.5',
-    title: 'Catch You Dreaming',
-  },
+  // '12.5': {
+  //   v: '12.5',
+  //   title: 'Catch You Dreaming',
+  // },
   '12.4': {
     v: '12.4',
     title: 'Express Return',
@@ -17,13 +17,13 @@ export const playlists = {
   '12.3': {
     v: '12.3',
     title: 'Closeness',
-    description: '',
+    description: 'A shortlist of feels that the electronic sun will never set',
   },
-  '12.2': {
-    v: '12.2',
-    title: 'Foothold',
-    description: '',
-  },
+  // '12.2': {
+  //   v: '12.2',
+  //   title: 'Foothold',
+  //   description: '',
+  // },
   '12.1': {
     v: '12.1',
     title: 'Night Whys',

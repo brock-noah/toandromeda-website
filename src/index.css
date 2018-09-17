@@ -7,6 +7,7 @@
 body {
   --text-white: #f3f3f3;
   --text-gray: #999;
+  --middle-gray: #777;
   --smooth-green: #69face;
   --lime-green: #cefa69;
   color: var(--text-white);;
@@ -56,13 +57,13 @@ p {
 }
 
 a {
-  color: var(--smooth-green);
+  color: var(--lime-green);
   text-decoration: none;
   border-bottom: 2px solid transparent;
 }
 
 a:hover {
-  border-bottom-color: var(--smooth-green);
+  border-bottom-color: var(--lime-green);
 }
 
 a.opacic {
