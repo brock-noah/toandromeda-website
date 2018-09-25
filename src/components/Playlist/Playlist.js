@@ -36,7 +36,7 @@ function Playlist({
         <p>{description}</p>
       </section>
       <OpenWith {...follow} />
-      <iframe className="Playlist_iframe" src={iframe} frameBorder="0" allowTransparency="true"></iframe>
+      <iframe className="Playlist_iframe" src={iframe} frameBorder="0" allowTransparency="true" title="Spotify Playlist"></iframe>
     </article>
   );
 }
