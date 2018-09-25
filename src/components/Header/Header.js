@@ -1,17 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
-
-const KCSB = 'http://www.kcsb-radio.dreamhosters.com/';
-const RFA = 'http://www.radiofreeamerica.com/dj/b-no-';
 
 function Header(props) {
   return (
     <header className="Header">
-      <h1>To Andromeda and Back</h1>
+      <Link to='/'><h1>To Andromeda and Back</h1></Link>
       <p>
-        Broadcasting live Monday 8PM on 91.9 FM in Santa Barbara or world wide at <a href={KCSB} target="_blank">KCSB.ORG</a>
+        Playlists of mellow haze and obfuscated rays for intergalactic cruise control.
       </p>
-      <p>Missed the show? <a href={RFA} target="_blank">Stream the last two shows</a>.</p>
+      <p>
+        <small style={{ color: 'var(--text-gray)'}}>
+          No shuffle, play from top to bottom.
+        </small>
+      </p>
     </header>
   );
 }

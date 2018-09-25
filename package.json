@@ -6,8 +6,10 @@
     "react-scripts": "0.6.1"
   },
   "dependencies": {
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "react-proptypes": "^1.0.0",
+    "react-router-dom": "^4.2.2"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,4 +1,22 @@
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+select {
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
 .App {
+  margin-top: 3rem;
 }
 
 .App_playlists {
@@ -10,23 +28,86 @@
   margin-right: 1rem;
 }
 
-@media (min-width: 1080px) {
-  .App_playlists {
-    margin-left: 3rem;
-    margin-right: 3rem;
-  }
-}
-
-@media (max-width: 560px) {
-  .App_playlists {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
 .App_footer {
-  margin-top: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  text-align: center;
+}
+
+.List_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: auto;
+  grid-gap: 1px;
+}
+
+.List_grid-item {
+  list-style-type: none;
+}
+
+.List_list {
+}
+
+.List_list:hover .List_item {
+  color: var(--text-gray);
+  opacity: 0.7;
+}
+
+.List_li {
+  list-style-type: none;
+}
+
+.List_link {
+  display: block;
+}
+
+.List_grid-item {
+  border-radius: 4px;
+  padding: 8px;
+  text-align: center;
+}
+
+.List_list .List_item:hover {
+  background-color: rgba(10,10,10,0.5);
+  color: var(--text-white);
+  opacity: 1;
+}
+
+.List_list .List_item--active {
+  padding: 12px 0;
+  border-top: solid 3px var(--middle-gray);
+}
+
+.ListItem_version {
+  visibility: hidden;
+}
+
+.List_grid .List_item:hover .ListItem_version {
+  visibility: visible;
+}
+
+.ListItem_version {
+}
+
+.ListItem_title {
+  font-size: 1.2rem;
+}
+
+.ListItem_link {
+}
+
+.ListItem_description {
+  font-size: .8rem;
+}
+
+@media (max-width: 900px) {
+  .List_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .List_grid {
+    grid-template-columns: 1fr;
+  }
 }

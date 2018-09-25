@@ -1,5 +1,10 @@
 .Playlist {
-  margin: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.Playlist_version {
+  color: var(--text-white);
 }
 
 .Playlist_name {
@@ -7,18 +12,26 @@
 }
 
 .Playlist_iframe {
-  width: 300px;
+  height: 240px;
 }
 
-@media (min-width: 560px) {
+@media (min-width: 940px) {
   .Playlist_iframe {
-    height: 380px;
+    height: 360px;
+  }
+}
+
+@media (max-width: 520px) {
+  .Playlist_iframe {
+    height: 88px;
   }
 }
 
 .Openwith {
   text-align: center;
   font-size: .9rem;
+  margin-top: 12px;
+  margin-bottom: 4px;
 }
 
 .Openwith > * {

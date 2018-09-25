@@ -1,31 +1,42 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'react-proptypes';
 import OpenWith from './OpenWith';
 import './Playlist.css';
 
 Playlist.propTypes = {
-  name: PropTypes.string,
-  id: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  uri: PropTypes.string,
   user: PropTypes.string
 };
 
 function Playlist({
-  id,
-  name,
+  v,
+  active,
+  uri,
+  title,
+  description,
   user,
 }) {
   const iframe = 
-    'https://embed.spotify.com/?uri=spotify%3Auser%3A'+ user +'%3Aplaylist%3A'+ id;
+    'https://embed.spotify.com/?uri=spotify%3Auser%3A'+ user +'%3Aplaylist%3A'+ uri;
 
   const follow = {
-    desktop: 'spotify:user:'+ user +':playlist:'+ id,
-    web: 'https://open.spotify.com/user/'+ user +'/playlist/'+ id
+    desktop: 'spotify:user:'+ user +':playlist:'+ uri,
+    web: 'https://open.spotify.com/user/'+ user +'/playlist/'+ uri
   };
 
+  const className = ['Playlist', active && 'List_item--active'].filter(Boolean).join(' ')
+
   return (
-    <article className="Playlist">
-      <h3 className="Playlist_name">{name}</h3>
-      <iframe className="Playlist_iframe" src={iframe} frameBorder="0" allowTransparency="true"></iframe>
+    <article className={className}>
+      <section style={{display: 'none'}}>
+        <h4 className="Playlist_version">{v}</h4>
+        <h3 className="Playlist_name">{title}</h3>
+        <p>{description}</p>
+      </section>
       <OpenWith {...follow} />
+      <iframe className="Playlist_iframe" src={iframe} frameBorder="0" allowTransparency="true"></iframe>
     </article>
   );
 }
