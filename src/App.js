@@ -6,7 +6,6 @@ import Follow from './components/Follow';
 import Playlist from './components/Playlist';
 import Header from './components/Header';
 import Stars from './components/Stars';
-import lists from './playlistData'
 import { playlists as _playlists, uris } from './data'
 
 const playlists =
@@ -30,10 +29,6 @@ class App extends React.Component {
     user: '1225146958',
     uris: uris,
   };
-
-  onSelect = e => {
-    window.location = `/${e.target.value}`
-  }
 
   render() {
     const {

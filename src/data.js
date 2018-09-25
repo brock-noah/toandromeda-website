@@ -112,7 +112,7 @@ export const playlists = {
   '10.1': {
     v: '10.1',
     title: 'Nebraska California',
-    description: 'Rock minor grooves and waves',
+    description: 'A tracklist of rock songs with minor grooves and waves',
   },
   '10.0': {
     v: '10.0',
