@@ -62,7 +62,7 @@ export const playlists = {
   '11.1': {
     v: '11.1',
     title: 'Casual Freefall',
-    description: 'Indie rock, singer songwriter vibe, sweeter sound to quick angst, then folky and bluesy',
+    description: 'Indie rock, singer-songwriter vibe, sweeter sound to quick angst, then folky and bluesy',
   },
   '11.0': {
     v: '11.0',
@@ -82,7 +82,7 @@ export const playlists = {
   '10.7': {
     v: '10.7',
     title: 'Truth Be Above',
-    description: 'Hiphop RPM Soul/Jazz Platter',
+    description: 'Hiphop RPM Soul Jazz Platter',
   },
   '10.6': {
     v: '10.6',
@@ -92,7 +92,7 @@ export const playlists = {
   '10.5': {
     v: '10.5',
     title: 'King Of The Daze',
-    description: 'Garage, Suft, Lofi Noise Rock Vomit',
+    description: 'Garage, Surf, Lofi Noise Rock Vomit',
   },
   '10.4': {
     v: '10.4',
@@ -127,7 +127,7 @@ export const playlists = {
   '9.4': {
     v: '9.4',
     title: '20%',
-    description: 'Mellow More Acoustic Singer-Song Writery',
+    description: 'Mellow more acoustic singer-songwritery',
   },
   '9.2': {
     v: '9.2',

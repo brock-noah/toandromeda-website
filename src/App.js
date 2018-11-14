@@ -41,13 +41,11 @@ class App extends React.Component {
         <div className="App">
           <Stars />
           <Header />
-
           <div className="App_playlists" style={{margin: '0 auto'}}>
             <ol className="List_grid List_list">
               {playlists.map(list =>
                 <li key={list.v} className="List_li List_item List_grid-item">
-                  <Link  to={`/${list.v}`} className="opacic List_link">
-                    <div className="ListItem_version">{list.v}</div>
+                  <Link to={`/${list.v}`} className="opacic List_link">
                     <div className="ListItem_title text-smooth-green">{list.title}</div>
                     <div className="ListItem_description">{list.description}</div>
                   </Link>

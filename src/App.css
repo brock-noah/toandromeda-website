@@ -42,15 +42,14 @@ select {
 }
 
 .List_grid-item {
-  list-style-type: none;
 }
 
 .List_list {
 }
 
 .List_list:hover .List_item {
-  color: var(--text-gray);
-  opacity: 0.7;
+  /*color: var(--text-gray);*/
+  /*opacity: 0.7;*/
 }
 
 .List_li {
@@ -59,18 +58,19 @@ select {
 
 .List_link {
   display: block;
+  padding: 16px 8px;
 }
 
 .List_grid-item {
   border-radius: 4px;
-  padding: 8px;
   text-align: center;
 }
 
 .List_list .List_item:hover {
-  background-color: rgba(10,10,10,0.5);
-  color: var(--text-white);
-  opacity: 1;
+  /*background-color: rgba(10,10,10,0.5);*/
+  box-shadow: 0px 0px 4px var(--text-gray);
+  /*color: var(--text-white);*/
+  /*opacity: 1;*/
 }
 
 .List_list .List_item--active {
@@ -83,7 +83,7 @@ select {
 }
 
 .List_grid .List_item:hover .ListItem_version {
-  visibility: visible;
+  /*visibility: visible;*/
 }
 
 .ListItem_version {
